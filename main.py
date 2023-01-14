@@ -17,6 +17,7 @@ def readClientID(): #function to open client_id.txt and read whats inside, then 
 client_id = readClientID()  #put your client id in client_id.txt
 RPC = Presence(client_id)  # Initialize the Presence client
 RPC.connect() # Start the handshake loop
+print("RPC connected successfully ^_^")
 
 while True:  # The presence will stay on as long as the program is running (in this case, infinitely)
     RPC.update(state = "RAM Usage: " + grabRAM(), details="CPU Usage: " + grabCPU()) # Updates our presence
